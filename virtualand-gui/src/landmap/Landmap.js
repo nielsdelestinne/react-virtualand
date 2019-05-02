@@ -1,28 +1,29 @@
 import React from 'react';
 import './Landmap.css';
 
-function Landmap({width, height}) {
-    return (
-        <section className="Landmap">
-            <table>
-                <tbody>
-                    {generateCells(width, height)}
-                </tbody>
-            </table>
-        </section>
-    );
-}
+export default class Landmap extends React.Component {
 
-export default Landmap;
-
-function generateCells(width, height) {
-    let allRows = [];
-    for (let row = 0; row < height; row++) {
-        let allColumns = [];
-        for (let column = 0; column < width; column++) {
-            allColumns.push(<td key={row.toString().concat(column.toString())}>{column}</td>)
-        }
-        allRows.push(<tr key={row}>{allColumns}</tr>)
+    render() {
+        return (
+            <section className="Landmap">
+                <table>
+                    <tbody>
+                        {this.generateCells()}
+                    </tbody>
+                </table>
+            </section>
+        );
     }
-    return allRows;
+
+    generateCells() {
+        let allRows = [];
+        for (let row = 0; row < this.props.height; row++) {
+            let allColumns = [];
+            for (let column = 0; column < this.props.width; column++) {
+                allColumns.push(<td key={row.toString().concat(column.toString())}>{column}</td>)
+            }
+            allRows.push(<tr key={row}>{allColumns}</tr>)
+        }
+        return allRows;
+    }
 }
