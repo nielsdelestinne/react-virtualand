@@ -1,0 +1,10 @@
+table {
+    background-color: black;
+    width: 100vw;
+    height: 95vh;
+    border-spacing: 0;
+}
+td {
+    border: black solid thin;
+    background-color: #968d99;
+}
