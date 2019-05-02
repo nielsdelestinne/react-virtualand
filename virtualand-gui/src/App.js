@@ -4,7 +4,10 @@ import './App.css';
 import Landmap from "./landmap/Landmap";
 import Controller from "./controls/Controller";
 
-class App extends React.Component {
+const MAX_ROWS = 35;
+const MAX_COLUMNS = 45;
+
+export default class App extends React.Component {
 
     constructor(properties) {
         super(properties);
@@ -35,12 +38,20 @@ class App extends React.Component {
     }
 
     handleRowAmountChanged(rows) {
-        this.setState({rows, columns: this.state.columns});
+        if(rows <= MAX_ROWS) {
+            this.setState({rows, columns: this.state.columns});
+        } else {
+            this.setState({rows: MAX_ROWS, columns: this.state.columns});
+        }
+
     }
 
     handleColumnAmountChanged(columns) {
-        this.setState({rows: this.state.rows, columns});
+        if(columns <= MAX_COLUMNS) {
+            this.setState({rows: this.state.rows, columns});
+        } else {
+            this.setState({rows: this.state.rows, columns: MAX_COLUMNS});
+        }
+
     }
 }
-
-export default App;
