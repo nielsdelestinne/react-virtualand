@@ -13,3 +13,4 @@ Resources used (for later reference):
 - https://reactjs.org/docs/handling-events.html
 - https://reactjs.org/docs/lifting-state-up.html
 - https://reactjs.org/docs/dom-elements.html
+- (routing) React-router - https://reacttraining.com/react-router/web/guides/quick-start
