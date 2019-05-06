@@ -1,6 +1,5 @@
 import * as React from "react";
 import Controller from "./controls/Controller";
-import logo from "../logo.svg";
 import Landmap from "./landmap/Landmap";
 import "./Experiment01.css"
 
@@ -26,9 +25,6 @@ export default class Experiment01 extends React.Component {
                                     onColumnAmountChanged={this.handleColumnAmountChanged}/>
                     </div>
                     <div className="grid-main-content">
-                        <header className="App-header">
-                            <img src={logo} className="App-logo" alt="logo"/>
-                        </header>
                         <Landmap width={this.state.columns} height={this.state.rows}/>
                     </div>
                 </div>

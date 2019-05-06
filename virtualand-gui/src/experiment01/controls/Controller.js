@@ -18,6 +18,7 @@ export default class Controller extends React.Component {
                         <label htmlFor="inputRows">Rows</label>
                         <input type="number" className="form-control" id="inputRows"
                                placeholder="amount of rows..."
+                               min="1"
                                value={this.props.dimensions.rows}
                                onChange={this.handleRowAmountChanged}/>
                     </div>
@@ -25,6 +26,7 @@ export default class Controller extends React.Component {
                         <label htmlFor="inputColumns">Columns</label>
                         <input type="number" className="form-control" id="inputColumns"
                                placeholder="amount of columns..."
+                               min="1"
                                value={this.props.dimensions.columns}
                                onChange={this.handleColumnAmountChanged}/>
                     </div>

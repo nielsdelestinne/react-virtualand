@@ -10,14 +10,11 @@ export default class AppRouter extends React.Component {
             <Router>
                 <nav>
                     <ul className="nav">
-                        {/*<li className="nav-item active">*/}
-                        {/*    <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>*/}
-                        {/*</li>*/}
                         <li className="nav-item">
                             <Link className="nav-link" to="/exp01/">Experiment 01</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/users/">Pricing</Link>
+                            <Link className="nav-link" to="/exp02/">Experiment 02 (todo)</Link>
                         </li>
                     </ul>
                 </nav>
