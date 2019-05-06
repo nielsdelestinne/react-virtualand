@@ -34,7 +34,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 10vw 90vw;
+  grid-template-columns: 20vw 80vw;
   grid-template-rows: 95vh;
   grid-template-areas: "controller-area main-content";
 }

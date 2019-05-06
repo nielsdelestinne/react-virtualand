@@ -4,7 +4,7 @@ import logo from "../logo.svg";
 import Landmap from "./landmap/Landmap";
 import "./Experiment01.css"
 
-const MAX_ROWS = 35;
+const MAX_ROWS = 30;
 const MAX_COLUMNS = 45;
 
 export default class Experiment01 extends React.Component {

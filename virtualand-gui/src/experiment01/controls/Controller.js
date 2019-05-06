@@ -12,17 +12,24 @@ export default class Controller extends React.Component {
     render() {
         return (
             <aside className="Controller">
-                <div>
-                    Rows: <br/>
-                    <input type="number" name="rows"
-                           value={this.props.dimensions.rows}
-                           onChange={this.handleRowAmountChanged} />
 
-                    Columns: <br/>
-                    <input type="number" name="columns"
-                           value={this.props.dimensions.columns}
-                           onChange={this.handleColumnAmountChanged} />
-                </div>
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="inputRows">Rows</label>
+                        <input type="number" className="form-control" id="inputRows"
+                               placeholder="amount of rows..."
+                               value={this.props.dimensions.rows}
+                               onChange={this.handleRowAmountChanged}/>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="inputColumns">Columns</label>
+                        <input type="number" className="form-control" id="inputColumns"
+                               placeholder="amount of columns..."
+                               value={this.props.dimensions.columns}
+                               onChange={this.handleColumnAmountChanged}/>
+                    </div>
+                </form>
+
             </aside>
         );
     }
